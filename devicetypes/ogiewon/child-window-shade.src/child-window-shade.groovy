@@ -24,8 +24,6 @@ metadata {
 	definition (name: "Child Window Shade", namespace: "ogiewon", author: "Jean-Guy Rivard", ofcDeviceType: "oic.d.blind", vid: "generic-shade-3") {
 		capability "Window Shade"
 		capability "Sensor"
-
-//		attribute "lastUpdated", "String"
 	}
 
 	simulator {
@@ -35,7 +33,7 @@ metadata {
 	tiles(scale: 2) {
 		multiAttributeTile(name:"windowShade", type: "lighting", width: 6, height: 4){
 			tileAttribute ("device.windowShade", key: "PRIMARY_CONTROL") {
-				attributeState "open", label:'${name}', action:"close", icon:"http://i.imgur.com/4TbsR54.png", backgroundColor:"#79b821", nextState:"closing"
+				attributeState "open", label:'${name}', action:"close", icon:"st.shades.shade-open", backgroundColor:"#79b821", nextState:"closing"
 				attributeState "closed", label:'${name}', action:"open", icon:"st.shades.shade-closed", backgroundColor:"#ffffff", nextState:"opening"
 				attributeState "partially open", label:'Open', action:"close", icon:"st.shades.shade-open", backgroundColor:"#79b821", nextState:"closing"
 				attributeState "opening", label:'${name}', action:"stop", icon:"st.shades.shade-opening", backgroundColor:"#79b821", nextState:"partially open"
