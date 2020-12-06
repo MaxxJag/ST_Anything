@@ -54,8 +54,8 @@ def close() {
 	sendData("off")
 }
 
-def presetPosition() {
-	sendData("preset")
+def pause() {
+	sendData("pause")
 }
 
 def parse(String description) {
