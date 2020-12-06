@@ -56,6 +56,11 @@ def pause() {
 	sendData("pause")
 }
 
+def sendData(String value) {
+    def name = device.deviceNetworkId.split("-")[-1]
+    parent.sendData("${name} ${value}")  
+}
+
 def parse(String description) {
     log.debug "parse(${description}) called"
 	def parts = description.split(" ")
