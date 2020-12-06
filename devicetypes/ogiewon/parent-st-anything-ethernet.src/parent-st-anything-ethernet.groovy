@@ -375,7 +375,9 @@ private createChildDevice(String deviceName, String deviceNumber) {
                 	break
          		case "valve": 
                 		deviceHandlerName = "Child Valve" 
-                	break        
+                	break
+				case "windowShade": 
+                		deviceHandlerName = "Child Window Shade" 
 			default: 
                 		log.error "No Child Device Handler case for ${deviceName}"
       		}
